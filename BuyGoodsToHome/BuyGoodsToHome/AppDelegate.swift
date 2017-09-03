@@ -20,7 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          // MARK: - Add firebase to project
         
         FIRApp.configure()
-
+        
+        if FIRAuth.auth()?.currentUser?.uid == nil {
+             window?.rootViewController = LogInViewControl()
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "Start")
+            window?.rootViewController = vc
+        }
         return true
     }
 

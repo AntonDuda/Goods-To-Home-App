@@ -8,11 +8,27 @@
 
 import UIKit
 
-class UserTaskVC: UIViewController {
+class UserTaskVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
+    @IBOutlet weak var tableViewUserTask: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Sender") as! UserTaskCell
+
+        
+        
+        return cell
+    }
+
 
 }

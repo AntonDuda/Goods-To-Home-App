@@ -55,10 +55,9 @@ class LogInViewControl: UIViewController {
                 return
             }
             
-            //!!!!self.present(mainScreen, animated: true, completion: nil)
-            //self.performSegue(withIdentifier: "main", sender: self)
-            let mainScreen = UserToDoVC()
-            self.present(mainScreen, animated: true, completion: nil)
+           
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Start")
+            self.present(vc!, animated: true, completion: nil)
         })
     }
     
@@ -174,7 +173,6 @@ class LogInViewControl: UIViewController {
         setupBackImage()
         setupUserImage()
     }
-    
     
     func setupBackImage(){
         backImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
