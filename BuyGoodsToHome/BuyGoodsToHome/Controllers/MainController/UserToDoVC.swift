@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class UserToDoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -21,9 +22,19 @@ class UserToDoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
 
     @IBAction func btnAddNewToDo(_ sender: Any) {
+        let newTask = NewTaskVC()
+        present(newTask, animated: true, completion: nil)
     }
     
     @IBAction func btnLogout(_ sender: Any) {
+        do {
+            try FIRAuth.auth()?.signOut()
+        } catch let logoutError {
+            print(logoutError)
+        }
+        
+        let loginController = LogInViewControl()
+        present(loginController, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
