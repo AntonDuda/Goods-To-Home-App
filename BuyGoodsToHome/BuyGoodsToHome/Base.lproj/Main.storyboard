@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="a5K-Xf-QhC">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="O3K-Q8-rTV">
+            <objects>
+                <viewController id="MSx-rh-pXT" customClass="UserTaskVC" customModule="BuyGoodsToHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cxS-mG-KcW"/>
+                        <viewControllerLayoutGuide type="bottom" id="3YF-Cw-0nx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SJF-HL-kzh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food to buy screen" translatesAutoresizingMaskIntoConstraints="NO" id="Egr-KZ-GKa">
+                                <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" alpha="0.69999999999999996" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R3T-ts-lzX">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Sender" id="xEf-bO-rKu">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xEf-bO-rKu" id="6TD-ah-AsK">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k10-0m-sxV">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="New Task" id="4W6-oK-ts9"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Egr-KZ-GKa" firstAttribute="leading" secondItem="SJF-HL-kzh" secondAttribute="leading" id="035-U0-Xcr"/>
+                            <constraint firstAttribute="trailing" secondItem="k10-0m-sxV" secondAttribute="trailing" id="45c-cH-msy"/>
+                            <constraint firstItem="R3T-ts-lzX" firstAttribute="leading" secondItem="SJF-HL-kzh" secondAttribute="leading" id="5En-Nu-CiT"/>
+                            <constraint firstItem="3YF-Cw-0nx" firstAttribute="top" secondItem="R3T-ts-lzX" secondAttribute="bottom" id="8zi-qE-XMq"/>
+                            <constraint firstItem="3YF-Cw-0nx" firstAttribute="top" secondItem="Egr-KZ-GKa" secondAttribute="bottom" id="F3Q-hz-0xV"/>
+                            <constraint firstItem="k10-0m-sxV" firstAttribute="top" secondItem="cxS-mG-KcW" secondAttribute="bottom" id="Qop-Ug-CBl"/>
+                            <constraint firstItem="R3T-ts-lzX" firstAttribute="top" secondItem="k10-0m-sxV" secondAttribute="bottom" id="XEy-oe-uZq"/>
+                            <constraint firstAttribute="trailing" secondItem="R3T-ts-lzX" secondAttribute="trailing" id="b85-S6-3Qu"/>
+                            <constraint firstItem="Egr-KZ-GKa" firstAttribute="top" secondItem="cxS-mG-KcW" secondAttribute="bottom" id="fSV-9r-C4R"/>
+                            <constraint firstItem="k10-0m-sxV" firstAttribute="leading" secondItem="SJF-HL-kzh" secondAttribute="leading" id="y3b-UO-1O2"/>
+                            <constraint firstAttribute="trailing" secondItem="Egr-KZ-GKa" secondAttribute="trailing" id="yMA-tK-8kn"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="cKB-d0-bkb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="82S-ZN-A9M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1591.2" y="450.22488755622192"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="wnc-Ic-9nu">
+            <objects>
+                <viewController id="im9-Ow-ZbF" customClass="UserToDoVC" customModule="BuyGoodsToHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Zu-Cs-t6L"/>
+                        <viewControllerLayoutGuide type="bottom" id="84q-F8-wTQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UYd-4Y-Jhh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="choosse screen" translatesAutoresizingMaskIntoConstraints="NO" id="Uhf-g0-NNW">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Iv-mm-Nur">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="SNp-MH-AWJ">
+                                        <barButtonItem key="leftBarButtonItem" title="Logout" id="Q7k-rj-f2v">
+                                            <connections>
+                                                <action selector="handleLogout:" destination="im9-Ow-ZbF" id="2on-0N-mEs"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ejr-6b-7mx">
+                                            <connections>
+                                                <action selector="handleAddNewTask:" destination="im9-Ow-ZbF" id="snl-eT-Tcf"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Iv-mm-Nur" firstAttribute="leading" secondItem="UYd-4Y-Jhh" secondAttribute="leading" id="1BC-oX-oJP"/>
+                            <constraint firstAttribute="trailing" secondItem="Uhf-g0-NNW" secondAttribute="trailing" id="6c5-VA-50J"/>
+                            <constraint firstItem="Uhf-g0-NNW" firstAttribute="top" secondItem="4Zu-Cs-t6L" secondAttribute="bottom" id="Cen-4j-79E"/>
+                            <constraint firstItem="2Iv-mm-Nur" firstAttribute="top" secondItem="4Zu-Cs-t6L" secondAttribute="bottom" id="Gby-jy-seh"/>
+                            <constraint firstItem="84q-F8-wTQ" firstAttribute="top" secondItem="Uhf-g0-NNW" secondAttribute="bottom" constant="-49" id="YSn-Cz-o3K"/>
+                            <constraint firstAttribute="trailing" secondItem="2Iv-mm-Nur" secondAttribute="trailing" id="nxZ-Gm-uFW"/>
+                            <constraint firstItem="Uhf-g0-NNW" firstAttribute="leading" secondItem="UYd-4Y-Jhh" secondAttribute="leading" id="rZ7-Ry-UXJ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="Sth-OT-QXm"/>
+                    <connections>
+                        <outlet property="naviBarTitle" destination="2Iv-mm-Nur" id="6cn-gD-SdQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0fD-3x-fem" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1591.2" y="-203.74812593703149"/>
+        </scene>
+        <!--Log In View Control-->
+        <scene sceneID="t0O-2k-lKG">
+            <objects>
+                <viewController id="a5K-Xf-QhC" customClass="LogInViewControl" customModule="BuyGoodsToHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hd9-qh-O04"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sv7-jJ-NFd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a0h-lk-q7j">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0NV-z2-qm2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-178" y="126"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="sLB-Ee-b2a">
+            <objects>
+                <tabBarController storyboardIdentifier="main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TdM-GG-fFK" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="05l-4v-3bo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="im9-Ow-ZbF" kind="relationship" relationship="viewControllers" id="NMD-o3-RXn"/>
+                        <segue destination="MSx-rh-pXT" kind="relationship" relationship="viewControllers" id="Pmt-JR-LK1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UgI-33-5fW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="640" y="126"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="choosse screen" width="312" height="208"/>
+        <image name="food to buy screen" width="137" height="91"/>
+    </resources>
+</document>
