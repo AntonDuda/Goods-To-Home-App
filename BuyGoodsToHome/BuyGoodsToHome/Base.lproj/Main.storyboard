@@ -56,8 +56,8 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPr-Xl-HaA">
-                                                    <rect key="frame" x="72" y="41" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="72" y="41" width="44" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -231,12 +231,12 @@
             </objects>
             <point key="canvasLocation" x="640" y="126"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--MyToDo-->
         <scene sceneID="WQO-M6-Gge">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BDC-V4-qog" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cqe-Ey-6pb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="Sth-OT-QXm"/>
+                    <tabBarItem key="tabBarItem" title="MyToDo" image="List" id="Sth-OT-QXm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="j2q-Up-FsL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -250,11 +250,11 @@
             </objects>
             <point key="canvasLocation" x="1590" y="-203.87323943661971"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--ListToBuy-->
         <scene sceneID="ZA2-7W-fGe">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HLA-vp-5o4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="cKB-d0-bkb"/>
+                    <tabBarItem key="tabBarItem" title="ListToBuy" image="Buy" id="cKB-d0-bkb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uRZ-ol-waA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -271,6 +271,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Buy" width="25" height="25"/>
+        <image name="List" width="25" height="25"/>
         <image name="choosse screen" width="312" height="208"/>
         <image name="food to buy screen" width="137" height="91"/>
     </resources>
