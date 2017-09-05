@@ -64,8 +64,9 @@ extension LogInViewControl: UIImagePickerControllerDelegate, UINavigationControl
                 print(err)
                 return
             }
-            let mainScreen = UserToDoVC()
-            self.present(mainScreen, animated: true, completion: nil)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let myVC = storyboard.instantiateViewController(withIdentifier: "Start")
+            self.present(myVC, animated: true, completion: nil)
         })
     }
     

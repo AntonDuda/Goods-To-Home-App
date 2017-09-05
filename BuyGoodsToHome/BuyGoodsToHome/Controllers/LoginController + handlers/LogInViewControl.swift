@@ -174,6 +174,8 @@ class LogInViewControl: UIViewController {
         view.addSubview(userImage)
         view.addSubview(loginSegmentControl)
         
+        view.backgroundColor = UIColor.white
+        
         setupInputConteinerView()
         setupLoginRegisterButton()
         setupLoginSegmentControl()
@@ -191,7 +193,7 @@ class LogInViewControl: UIViewController {
         backImage.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
     func setupBackImAlfa(){
-        backImAlfa.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
+        backImAlfa.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         backImAlfa.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         backImAlfa.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         backImAlfa.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
