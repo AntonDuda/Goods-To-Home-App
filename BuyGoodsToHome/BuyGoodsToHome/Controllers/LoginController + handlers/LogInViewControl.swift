@@ -13,6 +13,8 @@ class LogInViewControl: UIViewController {
     
     var messageController: UserToDoVC?
     
+    // MARK: - Create elements for login screen
+    
     let inputConteinerView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.white
@@ -54,10 +56,9 @@ class LogInViewControl: UIViewController {
                 print(error)
                 return
             }
-            
-           
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Start")
-            self.present(vc!, animated: true, completion: nil)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let myVC = storyboard.instantiateViewController(withIdentifier: "Start")
+            self.present(myVC, animated: true, completion: nil)
         })
     }
     
@@ -123,6 +124,12 @@ class LogInViewControl: UIViewController {
         return image
     }()
     
+    let backImAlfa: UIImageView = {
+        let image = UIImageView()
+        image.backgroundColor = UIColor.lightGray.withAlphaComponent(0.6)
+        image.translatesAutoresizingMaskIntoConstraints = false
+        return image
+    }()
     
     let loginSegmentControl: UISegmentedControl = {
         let sc = UISegmentedControl(items: ["Login","Register"])
@@ -137,6 +144,7 @@ class LogInViewControl: UIViewController {
     
     func handleChangeLoginReg() {
         let title = loginSegmentControl.titleForSegment(at: loginSegmentControl.selectedSegmentIndex)
+        
         loginRegisterButton.setTitle(title, for: .normal)
         
         inputConstraitHeight?.constant = loginSegmentControl.selectedSegmentIndex == 0 ? 100 : 150
@@ -159,9 +167,8 @@ class LogInViewControl: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.white.withAlphaComponent(1)
-        
         view.addSubview(backImage)
+        view.addSubview(backImAlfa)
         view.addSubview(inputConteinerView)
         view.addSubview(loginRegisterButton)
         view.addSubview(userImage)
@@ -172,13 +179,22 @@ class LogInViewControl: UIViewController {
         setupLoginSegmentControl()
         setupBackImage()
         setupUserImage()
+        setupBackImAlfa()
     }
+    
+    // MARK: - Setup constraints for all elements
     
     func setupBackImage(){
         backImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
         backImage.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         backImage.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         backImage.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    }
+    func setupBackImAlfa(){
+        backImAlfa.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
+        backImAlfa.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        backImAlfa.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        backImAlfa.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
     
     func setupLoginSegmentControl() {
@@ -198,7 +214,7 @@ class LogInViewControl: UIViewController {
     
     func setupInputConteinerView() {
         
-        // constraint Conteiner View
+        // MARK: -  Constraint Conteiner View
         
         inputConteinerView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         inputConteinerView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
@@ -206,7 +222,7 @@ class LogInViewControl: UIViewController {
         inputConstraitHeight = inputConteinerView.heightAnchor.constraint(equalToConstant: 150)
         inputConstraitHeight?.isActive = true
         
-        // add TextFields(Name,Email,Password) and Separators to Container View
+        // MARK: - Add TextFields(Name,Email,Password) and Separators to Container View
         
         inputConteinerView.addSubview(nameTextField)
         inputConteinerView.addSubview(nameSeparator)
@@ -214,7 +230,7 @@ class LogInViewControl: UIViewController {
         inputConteinerView.addSubview(emailSeparator)
         inputConteinerView.addSubview(passwordTextField)
         
-        // set constraint for TextFields and Separators
+        // MARK: -  Setup constraint for TextFields and Separators
         
         nameTextField.leftAnchor.constraint(equalTo: inputConteinerView.leftAnchor, constant: 12).isActive = true
         nameTextField.topAnchor.constraint(equalTo: inputConteinerView.topAnchor).isActive = true
@@ -247,6 +263,7 @@ class LogInViewControl: UIViewController {
         passwordTextFieldHeight = passwordTextField.heightAnchor.constraint(equalTo: inputConteinerView.heightAnchor, multiplier: 1/3)
         passwordTextFieldHeight?.isActive = true
     }
+    
     func setupLoginRegisterButton() {
         loginRegisterButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         loginRegisterButton.topAnchor.constraint(equalTo: inputConteinerView.bottomAnchor, constant: 12).isActive = true

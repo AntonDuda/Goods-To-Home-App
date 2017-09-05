@@ -39,8 +39,6 @@ extension UIImageView {
                     self.image = downloadedImage
                 }
             })
-            
         }).resume()
     }
-    
 }

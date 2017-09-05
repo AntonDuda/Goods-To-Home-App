@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FIRApp.configure()
         
+         //MARK: - Cheсk if user LoggedIn
+        
         if FIRAuth.auth()?.currentUser?.uid == nil {
              window?.rootViewController = LogInViewControl()
         } else {

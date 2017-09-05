@@ -31,12 +31,11 @@ extension LogInViewControl: UIImagePickerControllerDelegate, UINavigationControl
             }
             
             // successfully authenticated user
+            
             let imageName = NSUUID().uuidString
             let storageRef = FIRStorage.storage().reference().child("profile_images").child("\(imageName).png")
             
             if let uploadData = UIImagePNGRepresentation(self.userImage.image!) {
-                
-                
                 storageRef.put(uploadData, metadata: nil, completion: { (metadata, error) in
                     
                     if let error = error {
@@ -65,13 +64,11 @@ extension LogInViewControl: UIImagePickerControllerDelegate, UINavigationControl
                 print(err)
                 return
             }
-            //  self.messageController?.fetchUserAndSetupNavBarTitle()
-            //self.messageController?.navigationItem.title = values["name"] as? String
-            
             let mainScreen = UserToDoVC()
             self.present(mainScreen, animated: true, completion: nil)
         })
     }
+    
     func handleSelectUserImage() {
         let picker = UIImagePickerController()
         picker.delegate = self
@@ -86,16 +83,13 @@ extension LogInViewControl: UIImagePickerControllerDelegate, UINavigationControl
         if let editedImage = info["UIImagePickerControllerEditedImage"] as? UIImage {
             selectedImageFromPicker = editedImage
         } else if let originalImage = info["UIImagePickerControllerOriginalImage"] as? UIImage {
-            
             selectedImageFromPicker = originalImage
         }
-        
         if let selectedImage = selectedImageFromPicker {
             userImage.image = selectedImage
         }
         
         dismiss(animated: true, completion: nil)
-        
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
